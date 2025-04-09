@@ -1,0 +1,198 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #2a2a2a; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+h1, h2 {
+    color: #e0e0e0; /* Texto claro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#request-form {
+    background: #3c3c3c; /* Fondo del formulario oscuro */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* Sombra más visible */
+    max-width: 600px;
+    margin: 20px auto; /* Centrar el formulario */
+}
+
+#login-form-container {
+    background: #3c3c3c; /* Fondo del formulario oscuro */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* Sombra más visible */
+    max-width: 600px;
+    margin: 20px auto; /* Centrar el formulario */
+}
+
+#request-form div {
+    margin-bottom: 15px;
+}
+
+#request-form div > div {
+    display: flex;
+    align-items: center;
+}
+
+#request-form div > div input[type="radio"] {
+    margin-right: 5px;
+}
+
+#request-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c0c0c0;
+    font-weight: bold;
+}
+
+body.light-theme #request-form label {
+    color: #555;
+}
+
+#request-form input[type="text"],
+#request-form input[type="email"],
+#request-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+}
+
+body.light-theme #request-form input[type="text"],
+body.light-theme #request-form input[type="email"],
+body.light-theme textarea {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+}
+
+#request-form,
+body.dark-theme #request-form textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+#request-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3; /* Azul más oscuro */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#request-form button:hover {
+    background-color: #004494; /* Azul aún más oscuro al pasar el mouse */
+}
+
+#saved-requests {
+    margin-top: 30px;
+    background: #3c3c3c; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* Sombra más visible */
+    max-width: 800px;
+    margin: 20px auto; /* Centrar la sección */
+}
+
+.request-item {
+    border: 1px solid #555; /* Borde más oscuro */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #4a4a4a; /* Fondo de item oscuro */
+}
+
+.request-item p {
+    margin: 5px 0;
+}
+
+.request-item strong {
+    color: #c0c0c0; /* Texto strong más claro */
+}
+
+.admin-login-link {
+    display: inline-block;
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    min-width: 150px; /* Ancho mínimo para igualar tamaños */
+    text-align: center; /* Centrar el texto */
+}
+
+.admin-login-link:hover {
+    background-color: #004494; /* Azul aún más oscuro al pasar el mouse */
+}
+
+.top-right-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+}
+
+/* Estilos para el tema claro */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-theme h1,
+body.light-theme h2 {
+    color: #333;
+}
+
+body.light-theme #request-form {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.light-theme label {
+    color: #555;
+}
+
+body.light-theme #request-form input[type="text"],
+body.light-theme #request-form input[type="email"],
+body.light-theme #request-form textarea {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme textarea {
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+}
+
+body.light-theme #saved-requests {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.light-theme .request-item {
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+body.light-theme .request-item strong {
+    color: #333;
+}
