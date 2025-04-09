@@ -25,6 +25,37 @@ document.addEventListener('DOMContentLoaded', () => {
         descargarCsv();
     });
 
+    const themeToggle = document.getElementById('theme-toggle');
+    let currentTheme = localStorage.getItem('theme') || 'dark';
+    aplicarTema(currentTheme);
+
+    function aplicarTema(theme) {
+        if (theme === 'dark') {
+            document.body.classList.remove('light-theme');
+            document.body.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+            document.body.classList.add('light-theme');
+        }
+    }
+
+    function actualizarIconoTema() {
+        if (currentTheme === 'dark') {
+            themeToggle.textContent = '🌙 Cambiar Tema';
+        } else {
+            themeToggle.textContent = '☀️ Cambiar Tema';
+        }
+    }
+
+    actualizarIconoTema();
+
+    themeToggle.addEventListener('click', () => {
+        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', currentTheme);
+        aplicarTema(currentTheme);
+        actualizarIconoTema();
+    });
+
     function cargarSolicitudes() {
         // Limpiar el cuerpo de la tabla y ocultar mensaje previo
         tableBody.innerHTML = '';
